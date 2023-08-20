@@ -1,0 +1,6 @@
+C:\Users\test\Desktop\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\test\Desktop\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\test\Desktop\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\test\Desktop\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\test\Desktop\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\test\Desktop\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaEntidad\obj\Debug\CapaEntidad.pdb

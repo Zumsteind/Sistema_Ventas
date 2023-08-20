@@ -1,0 +1,117 @@
+
+
+create datebase db_sistema_ventas
+go
+
+use db_sistema_ventas
+go
+
+create table rol(
+idrol int primary key identity,
+descripcion varchar (50),
+fecharegistro datetime default getdate()
+)
+go
+
+create table permiso(
+idpermiso int primary key identity,
+idrol int references rol(idrol),
+nombremenu varchar(50),
+fecharegistro datetime default getdate()
+)
+
+go
+
+create table proveedor(
+idproveedor int primary key identity,
+documento varchar(50),
+razonsocial varchar(50),
+correo varchar(50),
+telefono varchar(50),
+estado bit,
+fecharegistro datetime default getdate()
+)
+go
+create table cliente(
+idcliente int primary key identity,
+documento varchar(50),
+nombrecompleto varchar(50),
+correo varchar(50),
+telefono varchar(50),
+estado bit,
+fecharegistro datetime default getdate()
+)
+go
+create table usuario(
+idusuario int primary key identity,
+documento varchar(50),
+nombrecompleto varchar(50),
+clave varchar(50),
+idrol int references rol(idrol),
+estado bit,
+fecharegistro datetime default getdate()
+)
+go
+create table categoria(
+idcategoria int primary key identity,
+descripcion varchar(50),
+estado bit,
+fecharegistro datetime default getdate()
+)
+go
+create table producto(
+idproducto int primary key identity,
+codigo varchar(50),
+nombre varchar(50),
+descripcion varchar(50),
+idcategoria int references categoria(idcategoria),
+stock int not null default 0,
+preciocompra decimal(10,2) default 0,
+precioventa decimal(10,2) default 0,
+estado bit,
+fecharegistro  datetime default getdate()
+)
+go
+create table compra(
+idcompra int primary key identity,
+idusuario int references usuario(idusuario),
+idproveedor int references proveedor(idproveedor),
+tipodocumento varchar(50),
+numerodocumento varchar(50),
+montototal decimal(10,2),
+fecharegistro datetime default getdate()
+)
+go
+create table detalle_compra(
+iddetallecompra int primary key identity,
+idcompra int references compra(idcompra),
+idproducto int references producto(idproducto),
+preciocompra decimal(10,2) default 0,
+precioventa decimal(10,2) default 0,
+cantidad int,
+montototal decimal(10,2),
+fecharegistro datetime default getdate()
+)
+go
+create table venta(
+idventa int primary key identity,
+idusuario int references usuario(idusuario),
+tipodocumento varchar(50),
+numerodocumento varchar(50),
+documentocliente varchar(50),
+nombrecliente varchar(100),
+montopago decimal(10,2),
+montocambio decimal(10,2),
+montototal decimal(10,2),
+fecharegistro datetime default getdate()
+)
+go
+create table detalle_venta(
+iddetalleventa int primary key identity,
+idventa int references venta(idventa),
+idproducto int references producto(idproducto),
+precioventa decimal(10,2),
+cantidad int,
+subtotal decimal(10,2),
+fecharegistro datetime default getdate()
+)
