@@ -41,6 +41,8 @@ namespace capaPresentacion
             this.menutitulo = new System.Windows.Forms.MenuStrip();
             this.label1 = new System.Windows.Forms.Label();
             this.contenedor = new System.Windows.Forms.Panel();
+            this.lblnombre = new System.Windows.Forms.Label();
+            this.lblusuario = new System.Windows.Forms.Label();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -194,14 +196,42 @@ namespace capaPresentacion
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(0, 138);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(1302, 623);
+            this.contenedor.Size = new System.Drawing.Size(1302, 611);
             this.contenedor.TabIndex = 3;
+            // 
+            // lblnombre
+            // 
+            this.lblnombre.AutoSize = true;
+            this.lblnombre.BackColor = System.Drawing.Color.SteelBlue;
+            this.lblnombre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lblnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnombre.ForeColor = System.Drawing.Color.White;
+            this.lblnombre.Location = new System.Drawing.Point(1060, 36);
+            this.lblnombre.Name = "lblnombre";
+            this.lblnombre.Size = new System.Drawing.Size(65, 17);
+            this.lblnombre.TabIndex = 4;
+            this.lblnombre.Text = "Usuario: ";
+            // 
+            // lblusuario
+            // 
+            this.lblusuario.AutoSize = true;
+            this.lblusuario.BackColor = System.Drawing.Color.SteelBlue;
+            this.lblusuario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lblusuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblusuario.ForeColor = System.Drawing.Color.White;
+            this.lblusuario.Location = new System.Drawing.Point(1118, 36);
+            this.lblusuario.Name = "lblusuario";
+            this.lblusuario.Size = new System.Drawing.Size(69, 17);
+            this.lblusuario.TabIndex = 5;
+            this.lblusuario.Text = "lblusuario";
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1302, 761);
+            this.ClientSize = new System.Drawing.Size(1302, 749);
+            this.Controls.Add(this.lblusuario);
+            this.Controls.Add(this.lblnombre);
             this.Controls.Add(this.contenedor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menu);
@@ -233,6 +263,8 @@ namespace capaPresentacion
         private System.Windows.Forms.MenuStrip menutitulo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel contenedor;
+        private System.Windows.Forms.Label lblnombre;
+        private System.Windows.Forms.Label lblusuario;
     }
 }
 
