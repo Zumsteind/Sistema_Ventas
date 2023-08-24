@@ -115,3 +115,34 @@ cantidad int,
 subtotal decimal(10,2),
 fecharegistro datetime default getdate()
 )
+
+
+
+//aca vamos hacer unos ingresos, para el loggin, y el permiso para cada usuario y rol. 
+
+
+insert into rol (descripcion)values ('ADMINISTRADOR')
+
+insert into rol (descripcion)values ('EMPLEADO')
+
+insert into permiso (idrol,nombremenu) values
+ (1,'menuusuario'),
+ (1,'menumantenedor'),
+ (1,'menuventas'),
+ (1,'menucompras'),
+ (1,'menuclientes'),
+ (1,'menuproveedores'),
+ (1,'menureportes'),
+ (1,'menuacercade')
+
+
+ insert into permiso (idrol,nombremenu) values
+ (2,'menuventas'),
+ (2,'menucompras'),
+ (2,'menuclientes'),
+ (2,'menuproveedores'),
+ (2,'menuacercade')
+
+
+  insert into usuario (documento,nombrecompleto,clave,idrol,estado) values
+ ('123456','EMPLEADO','123456',2,1)

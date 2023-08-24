@@ -9,3 +9,14 @@ C:\Users\test\Desktop\sistema de gestion de ventas\sistema de ventas\SistemaDeVe
 C:\Users\test\Desktop\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
 C:\Users\test\Desktop\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaNegocio\obj\Debug\CapaNegocio.dll
 C:\Users\test\Desktop\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaNegocio\bin\Debug\CapaEntidad.dll
+C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaNegocio\bin\Debug\CapaEntidad.pdb
+C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaNegocio\obj\Debug\CapaNegocio.pdb

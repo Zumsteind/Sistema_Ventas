@@ -36,3 +36,11 @@ C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ven
 C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.csproj.CopyComplete
 C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.exe
 C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.pdb
+C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.frmCategoria.resources
+C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.frmClientes.resources
+C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.frmCompras.resources
+C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.frmProducto.resources
+C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.frmProveedores.resources
+C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.frmReportes.resources
+C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.frmUsuarios.resources
+C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.frmVentas.resources
