@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,8 +27,11 @@ namespace capaPresentacion
 
 
 
-        public Inicio(Usuario ousuario)
+        public Inicio(Usuario ousuario = null)
         {
+            if (ousuario == null)
+                usuarioactual = new Usuario() { NombreCompleto = "ADMIN predef", IdUsuario = 1 };
+            else
             usuarioactual = ousuario;
             
             InitializeComponent();
@@ -134,6 +137,9 @@ namespace capaPresentacion
             AbrirFormulario(menureportes, new frmReportes());
         }
 
-        
+        private void menutitulo_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

@@ -44,3 +44,30 @@ C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ven
 C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.frmReportes.resources
 C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.frmUsuarios.resources
 C:\Users\test\Desktop\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.frmVentas.resources
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\bin\Debug\capaPresentacion.exe.config
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\bin\Debug\capaPresentacion.exe
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\bin\Debug\capaPresentacion.pdb
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\bin\Debug\CapaEntidad.dll
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\bin\Debug\CapaNegocio.dll
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\bin\Debug\CapaDatos.dll
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\bin\Debug\CapaEntidad.pdb
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\bin\Debug\CapaNegocio.pdb
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\bin\Debug\CapaDatos.pdb
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.csproj.AssemblyReference.cache
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.frmCategoria.resources
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.frmClientes.resources
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.frmCompras.resources
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.frmProducto.resources
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.frmProveedores.resources
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.frmReportes.resources
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.frmUsuarios.resources
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.frmVentas.resources
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.Inicio.resources
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.Login.resources
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.Properties.Resources.resources
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.csproj.GenerateResource.cache
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.csproj.CopyComplete
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.exe
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.pdb
