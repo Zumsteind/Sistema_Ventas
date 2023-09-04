@@ -87,12 +87,5 @@ namespace CapaNegocio
             else
                 return objcd_usuario.Eliminar(obj, out Mensaje);
         }
-
-
-
-
-
-
-
     }
 }

@@ -34,9 +34,8 @@ namespace capaPresentacion
             List<Rol> listaRol = new CN_Rol().Listar();
 
             foreach(Rol item in listaRol)
-            {
-                cbxRol.Items.Add(new OpcionCombo() { Valor = item.IdRol, Texto = item.Descripcion });
-            }
+            cbxRol.Items.Add(new OpcionCombo() { Valor = item.IdRol, Texto = item.Descripcion });
+            
             cbxRol.DisplayMember = "Texto";
             cbxRol.ValueMember = "Valor";
             cbxRol.SelectedIndex = 0;
@@ -46,15 +45,11 @@ namespace capaPresentacion
             foreach (DataGridViewColumn columna in dgvData.Columns)
             {
                 if(columna.Visible == true && columna.Name!= "btnSeleccionar")
-                {
-                    cbxBuscador.Items.Add(new OpcionCombo() { Valor = columna.Name, Texto = columna.HeaderText });
-                }
+                cbxBuscador.Items.Add(new OpcionCombo() { Valor = columna.Name, Texto = columna.HeaderText });
             }
                 cbxBuscador.DisplayMember = "Texto";
                 cbxBuscador.ValueMember = "Valor";
                 cbxBuscador.SelectedIndex = 0;
-
-
 
             //MOSTRAR TODOS LOS USUARIOS
             List<Usuario> listaUsuario = new CN_Usuario().Listar();
@@ -68,8 +63,6 @@ namespace capaPresentacion
                     item.Estado == true ? "Activo" : "No Activo" 
                 });
             }
-
-
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -124,10 +117,8 @@ namespace capaPresentacion
                     LimpiarTXT();
                 }
                 else
-                MessageBox.Show(Mensaje);
-                
-            }
-     
+                MessageBox.Show(Mensaje);                
+            }     
         }
 
 
