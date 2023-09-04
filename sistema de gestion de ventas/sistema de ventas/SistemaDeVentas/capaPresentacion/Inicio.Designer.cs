@@ -67,20 +67,21 @@ namespace capaPresentacion
             this.menuacercade});
             this.menu.Location = new System.Drawing.Point(0, 80);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(1019, 73);
+            this.menu.Size = new System.Drawing.Size(1759, 79);
             this.menu.TabIndex = 0;
             this.menu.Text = "menuStrip1";
             // 
             // menuusuario
             // 
             this.menuusuario.AutoSize = false;
+            this.menuusuario.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.menuusuario.IconChar = FontAwesome.Sharp.IconChar.UserGear;
             this.menuusuario.IconColor = System.Drawing.Color.Black;
             this.menuusuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menuusuario.IconSize = 50;
+            this.menuusuario.IconSize = 60;
             this.menuusuario.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuusuario.Name = "menuusuario";
-            this.menuusuario.Size = new System.Drawing.Size(90, 69);
+            this.menuusuario.Size = new System.Drawing.Size(110, 75);
             this.menuusuario.Text = "Usuarios";
             this.menuusuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.menuusuario.Click += new System.EventHandler(this.menuusuario_Click);
@@ -91,13 +92,14 @@ namespace capaPresentacion
             this.menumantenedor.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.submenuCategoria,
             this.submenuProducto});
+            this.menumantenedor.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.menumantenedor.IconChar = FontAwesome.Sharp.IconChar.Tools;
             this.menumantenedor.IconColor = System.Drawing.Color.Black;
             this.menumantenedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menumantenedor.IconSize = 50;
+            this.menumantenedor.IconSize = 60;
             this.menumantenedor.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menumantenedor.Name = "menumantenedor";
-            this.menumantenedor.Size = new System.Drawing.Size(90, 69);
+            this.menumantenedor.Size = new System.Drawing.Size(110, 75);
             this.menumantenedor.Text = "Mantenedor";
             this.menumantenedor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -107,7 +109,7 @@ namespace capaPresentacion
             this.submenuCategoria.IconColor = System.Drawing.Color.Black;
             this.submenuCategoria.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.submenuCategoria.Name = "submenuCategoria";
-            this.submenuCategoria.Size = new System.Drawing.Size(157, 26);
+            this.submenuCategoria.Size = new System.Drawing.Size(224, 30);
             this.submenuCategoria.Text = "Categoria";
             this.submenuCategoria.Click += new System.EventHandler(this.submenuCategoria_Click);
             // 
@@ -117,7 +119,7 @@ namespace capaPresentacion
             this.submenuProducto.IconColor = System.Drawing.Color.Black;
             this.submenuProducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.submenuProducto.Name = "submenuProducto";
-            this.submenuProducto.Size = new System.Drawing.Size(157, 26);
+            this.submenuProducto.Size = new System.Drawing.Size(224, 30);
             this.submenuProducto.Text = "Producto";
             this.submenuProducto.Click += new System.EventHandler(this.submenuProducto_Click);
             // 
@@ -127,13 +129,14 @@ namespace capaPresentacion
             this.menuventas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.submenuRegistrarVenta,
             this.submenuVerdetalleVenta});
+            this.menuventas.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.menuventas.IconChar = FontAwesome.Sharp.IconChar.Tags;
             this.menuventas.IconColor = System.Drawing.Color.Black;
             this.menuventas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menuventas.IconSize = 50;
+            this.menuventas.IconSize = 60;
             this.menuventas.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuventas.Name = "menuventas";
-            this.menuventas.Size = new System.Drawing.Size(90, 69);
+            this.menuventas.Size = new System.Drawing.Size(110, 75);
             this.menuventas.Text = "Ventas";
             this.menuventas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -143,7 +146,7 @@ namespace capaPresentacion
             this.submenuRegistrarVenta.IconColor = System.Drawing.Color.Black;
             this.submenuRegistrarVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.submenuRegistrarVenta.Name = "submenuRegistrarVenta";
-            this.submenuRegistrarVenta.Size = new System.Drawing.Size(165, 26);
+            this.submenuRegistrarVenta.Size = new System.Drawing.Size(190, 30);
             this.submenuRegistrarVenta.Text = "Registrar";
             this.submenuRegistrarVenta.Click += new System.EventHandler(this.submenuRegistrarVenta_Click);
             // 
@@ -153,7 +156,7 @@ namespace capaPresentacion
             this.submenuVerdetalleVenta.IconColor = System.Drawing.Color.Black;
             this.submenuVerdetalleVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.submenuVerdetalleVenta.Name = "submenuVerdetalleVenta";
-            this.submenuVerdetalleVenta.Size = new System.Drawing.Size(165, 26);
+            this.submenuVerdetalleVenta.Size = new System.Drawing.Size(190, 30);
             this.submenuVerdetalleVenta.Text = "Ver Detalle";
             this.submenuVerdetalleVenta.Click += new System.EventHandler(this.submenuVerdetalleVenta_Click);
             // 
@@ -163,13 +166,14 @@ namespace capaPresentacion
             this.menucompras.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.submenuRegistrarCompra,
             this.submenuVerDetallecompra});
+            this.menucompras.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.menucompras.IconChar = FontAwesome.Sharp.IconChar.DollyFlatbed;
             this.menucompras.IconColor = System.Drawing.Color.Black;
             this.menucompras.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menucompras.IconSize = 50;
+            this.menucompras.IconSize = 60;
             this.menucompras.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menucompras.Name = "menucompras";
-            this.menucompras.Size = new System.Drawing.Size(90, 69);
+            this.menucompras.Size = new System.Drawing.Size(110, 75);
             this.menucompras.Text = "Compras";
             this.menucompras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -179,7 +183,7 @@ namespace capaPresentacion
             this.submenuRegistrarCompra.IconColor = System.Drawing.Color.Black;
             this.submenuRegistrarCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.submenuRegistrarCompra.Name = "submenuRegistrarCompra";
-            this.submenuRegistrarCompra.Size = new System.Drawing.Size(165, 26);
+            this.submenuRegistrarCompra.Size = new System.Drawing.Size(190, 30);
             this.submenuRegistrarCompra.Text = "Registrar";
             this.submenuRegistrarCompra.Click += new System.EventHandler(this.submenuRegistrarCompra_Click);
             // 
@@ -189,20 +193,21 @@ namespace capaPresentacion
             this.submenuVerDetallecompra.IconColor = System.Drawing.Color.Black;
             this.submenuVerDetallecompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.submenuVerDetallecompra.Name = "submenuVerDetallecompra";
-            this.submenuVerDetallecompra.Size = new System.Drawing.Size(165, 26);
+            this.submenuVerDetallecompra.Size = new System.Drawing.Size(190, 30);
             this.submenuVerDetallecompra.Text = "Ver Detalle";
             this.submenuVerDetallecompra.Click += new System.EventHandler(this.submenuVerDetallecompra_Click);
             // 
             // menuclientes
             // 
             this.menuclientes.AutoSize = false;
+            this.menuclientes.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.menuclientes.IconChar = FontAwesome.Sharp.IconChar.UserGroup;
             this.menuclientes.IconColor = System.Drawing.Color.Black;
             this.menuclientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menuclientes.IconSize = 50;
+            this.menuclientes.IconSize = 60;
             this.menuclientes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuclientes.Name = "menuclientes";
-            this.menuclientes.Size = new System.Drawing.Size(90, 69);
+            this.menuclientes.Size = new System.Drawing.Size(110, 75);
             this.menuclientes.Text = "Clientes";
             this.menuclientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.menuclientes.Click += new System.EventHandler(this.menuclientes_Click);
@@ -210,13 +215,14 @@ namespace capaPresentacion
             // menuproveedores
             // 
             this.menuproveedores.AutoSize = false;
+            this.menuproveedores.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.menuproveedores.IconChar = FontAwesome.Sharp.IconChar.AddressCard;
             this.menuproveedores.IconColor = System.Drawing.Color.Black;
             this.menuproveedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menuproveedores.IconSize = 50;
+            this.menuproveedores.IconSize = 60;
             this.menuproveedores.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuproveedores.Name = "menuproveedores";
-            this.menuproveedores.Size = new System.Drawing.Size(90, 69);
+            this.menuproveedores.Size = new System.Drawing.Size(110, 75);
             this.menuproveedores.Text = "Proveedores";
             this.menuproveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.menuproveedores.Click += new System.EventHandler(this.menuproveedores_Click);
@@ -224,13 +230,14 @@ namespace capaPresentacion
             // menureportes
             // 
             this.menureportes.AutoSize = false;
+            this.menureportes.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.menureportes.IconChar = FontAwesome.Sharp.IconChar.BarChart;
             this.menureportes.IconColor = System.Drawing.Color.Black;
             this.menureportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menureportes.IconSize = 50;
+            this.menureportes.IconSize = 60;
             this.menureportes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menureportes.Name = "menureportes";
-            this.menureportes.Size = new System.Drawing.Size(90, 69);
+            this.menureportes.Size = new System.Drawing.Size(110, 75);
             this.menureportes.Text = "Reportes";
             this.menureportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.menureportes.Click += new System.EventHandler(this.menureportes_Click);
@@ -238,13 +245,14 @@ namespace capaPresentacion
             // menuacercade
             // 
             this.menuacercade.AutoSize = false;
+            this.menuacercade.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.menuacercade.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
             this.menuacercade.IconColor = System.Drawing.Color.Black;
             this.menuacercade.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menuacercade.IconSize = 50;
+            this.menuacercade.IconSize = 60;
             this.menuacercade.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.menuacercade.Name = "menuacercade";
-            this.menuacercade.Size = new System.Drawing.Size(90, 69);
+            this.menuacercade.Size = new System.Drawing.Size(110, 75);
             this.menuacercade.Text = "Acerca de";
             this.menuacercade.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -256,7 +264,7 @@ namespace capaPresentacion
             this.menutitulo.Location = new System.Drawing.Point(0, 0);
             this.menutitulo.Name = "menutitulo";
             this.menutitulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menutitulo.Size = new System.Drawing.Size(1019, 80);
+            this.menutitulo.Size = new System.Drawing.Size(1759, 80);
             this.menutitulo.TabIndex = 1;
             this.menutitulo.Text = "menuStrip2";
             this.menutitulo.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menutitulo_ItemClicked);
@@ -277,10 +285,10 @@ namespace capaPresentacion
             // contenedor
             // 
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contenedor.Location = new System.Drawing.Point(0, 153);
+            this.contenedor.Location = new System.Drawing.Point(0, 159);
             this.contenedor.Margin = new System.Windows.Forms.Padding(4);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(1019, 712);
+            this.contenedor.Size = new System.Drawing.Size(1759, 706);
             this.contenedor.TabIndex = 3;
             // 
             // lblnombre
@@ -315,7 +323,7 @@ namespace capaPresentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1019, 865);
+            this.ClientSize = new System.Drawing.Size(1759, 865);
             this.Controls.Add(this.lblusuario);
             this.Controls.Add(this.lblnombre);
             this.Controls.Add(this.contenedor);
