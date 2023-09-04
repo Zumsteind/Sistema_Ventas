@@ -127,10 +127,7 @@ namespace capaPresentacion
                 MessageBox.Show(Mensaje);
                 
             }
-
-
-
-            
+     
         }
 
 
@@ -144,7 +141,8 @@ namespace capaPresentacion
             txtContrasenia.Text = "";
             txtConfirmarContrasenia.Text = "";
             cbxEstado.SelectedIndex = 0;
-            cbxRol.SelectedIndex = 0;            
+            cbxRol.SelectedIndex = 0;
+            txtDocumento.Select();
         }
 
         //Este evento sirve para agregarle un icono al boton del gridView
@@ -164,7 +162,6 @@ namespace capaPresentacion
 
                 e.Graphics.DrawImage(Properties.Resources.check, new Rectangle(x, y, w, h));
                 e.Handled = true;
-
             }
         }
 
@@ -216,7 +213,7 @@ namespace capaPresentacion
         {
             if (Convert.ToInt32(txtID.Text) != 0)
             {
-                if(MessageBox.Show("¿Desea elminar el usurio?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if(MessageBox.Show("¿Desea eliminar el usuario?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     string Mensaje = string.Empty;
                     Usuario objUsuario = new Usuario() { IdUsuario = Convert.ToInt32(txtID.Text) };
