@@ -1,6 +1,5 @@
 
-
-create datebase db_sistema_ventas
+create database db_sistema_ventas
 go
 
 use db_sistema_ventas
@@ -32,6 +31,7 @@ estado bit,
 fecharegistro datetime default getdate()
 )
 go
+
 create table cliente(
 idcliente int primary key identity,
 documento varchar(50),
@@ -42,16 +42,19 @@ estado bit,
 fecharegistro datetime default getdate()
 )
 go
+
 create table usuario(
 idusuario int primary key identity,
 documento varchar(50),
 nombrecompleto varchar(50),
+correo varchar(70),
 clave varchar(50),
 idrol int references rol(idrol),
 estado bit,
 fecharegistro datetime default getdate()
 )
 go
+
 create table categoria(
 idcategoria int primary key identity,
 descripcion varchar(50),
@@ -59,6 +62,7 @@ estado bit,
 fecharegistro datetime default getdate()
 )
 go
+
 create table producto(
 idproducto int primary key identity,
 codigo varchar(50),
@@ -72,6 +76,7 @@ estado bit,
 fecharegistro  datetime default getdate()
 )
 go
+
 create table compra(
 idcompra int primary key identity,
 idusuario int references usuario(idusuario),
@@ -82,6 +87,7 @@ montototal decimal(10,2),
 fecharegistro datetime default getdate()
 )
 go
+
 create table detalle_compra(
 iddetallecompra int primary key identity,
 idcompra int references compra(idcompra),
@@ -93,6 +99,7 @@ montototal decimal(10,2),
 fecharegistro datetime default getdate()
 )
 go
+
 create table venta(
 idventa int primary key identity,
 idusuario int references usuario(idusuario),
@@ -106,6 +113,7 @@ montototal decimal(10,2),
 fecharegistro datetime default getdate()
 )
 go
+
 create table detalle_venta(
 iddetalleventa int primary key identity,
 idventa int references venta(idventa),
@@ -117,8 +125,25 @@ fecharegistro datetime default getdate()
 )
 
 
+/*
+create trigger BajaStock
+ON detalle_venta
+AFTER INSERT
+AS
 
-//aca vamos hacer unos ingresos, para el loggin, y el permiso para cada usuario y rol. 
+BEGIN
+       DECLARE @IDproducto int, @Stock int
+	   SET @IDproducto =(Select IDproducto FROM inserted)
+	   set @Stock = (Select Cantidad FROM inserted)
+
+	   UPDATE Producto
+	   SET Stock = Stock - @Stock
+	   WHERE IDproducto = @IDproducto
+END
+GO*/
+
+
+--aca vamos hacer unos ingresos, para el loggin, y el permiso para cada usuario y rol. 
 
 
 insert into rol (descripcion)values ('ADMINISTRADOR')
@@ -144,5 +169,118 @@ insert into permiso (idrol,nombremenu) values
  (2,'menuacercade')
 
 
-  insert into usuario (documento,nombrecompleto,clave,idrol,estado) values
- ('123456','EMPLEADO','123456',2,1)
+  insert into usuario (documento,nombrecompleto,correo, clave,idrol,estado) values
+ ('123456','ADMINISTRADOR','administrador@gmail.com','123456',1,1),
+ ('987654', 'EMPLEADO','empleado@gmail.com', '987654',2,1)
+
+
+
+
+ create procedure SP_RegistrarUsuario(
+ @Documento varchar(50),
+ @NombreCompleto varchar(100),
+ @Correo varchar(100),
+ @Clave varchar(100),
+ @IdRol int,
+ @Estado bit ,
+ @IdUsuarioResultado int output,
+ @Mensaje varchar(500) output 
+ )
+ AS
+ begin
+        set @IdUsuarioResultado = 0
+		set @Mensaje =''
+
+		if not exists(select * from usuario where Documento = @Documento)
+		begin
+		     insert into usuario(Documento, nombrecompleto, correo, clave, idrol,estado) values
+			 (@Documento, @NombreCompleto, @Correo, @Clave, @IdRol, @Estado)
+
+			 set @IdUsuarioResultado = SCOPE_IDENTITY()			 
+     	end
+	else
+	   set @Mensaje = 'El numero de documento que ingreso, ya se encuentra registrado. Intente nuevamente'
+
+  end
+
+
+
+
+
+
+  create procedure SP_EditarUsuario(
+  @IdUsuario int,
+ @Documento varchar(50),
+ @NombreCompleto varchar(100),
+ @Correo varchar(100),
+ @Clave varchar(100),
+ @IdRol int,
+ @Estado bit ,
+ @Respuesta bit output,
+ @Mensaje varchar(500) output 
+ )
+ AS
+ begin
+        set @Respuesta = 0
+		set @Mensaje =''
+
+		if not exists(select * from usuario where Documento = @Documento and idusuario != @IdUsuario)
+		begin
+		     update usuario set
+			 Documento = @Documento,
+			 nombrecompleto = @NombreCompleto,
+			 correo = @Correo,
+			 clave = @Clave,
+			 idrol  =@IdRol,
+			 estado = @Estado
+			 where idusuario = @IdUsuario
+
+			 set @Respuesta = 1			 
+     	end
+	else
+	   set @Mensaje = 'El numero de documento que ingreso, ya se encuentra registrado. Intente nuevamente'
+
+  end
+
+
+
+
+   create procedure SP_EliminarUsuario(
+ @IdUsuario int,
+ @Respuesta bit output,
+ @Mensaje varchar(500) output 
+ )
+ AS
+ begin
+        set @Respuesta = 0
+		set @Mensaje =''
+		declare @pasoReglas bit = 1
+
+		if exists (select * from compra c
+		inner join usuario u on u.IdUsuario = c.IdUsuario
+		where u.IdUsuario = @IdUsuario
+		)
+		begin
+		    set @pasoReglas = 0
+		    set @Respuesta = 0
+			set @Mensaje =@Mensaje + 'No se puede eliminar el usuario porque se encuentra relacionado a una COMPRA\n'
+		end
+
+
+		if exists (select * from venta v
+		inner join usuario u on u.IdUsuario = v.IdUsuario
+		where u.IdUsuario = @IdUsuario
+		)
+		begin
+		    set @pasoReglas = 0
+		    set @Respuesta = 0
+			set @Mensaje = @Mensaje + 'No se puede eliminar el usuario porque se encuentra relacionado a una VENTA\n'
+		end
+
+
+		if(@pasoReglas =1)
+		begin
+		     delete from usuario where IdUsuario = @IdUsuario
+			 set @Respuesta = 1
+		end
+  end
