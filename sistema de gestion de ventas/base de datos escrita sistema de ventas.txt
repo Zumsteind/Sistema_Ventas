@@ -1,4 +1,3 @@
-
 create database db_sistema_ventas
 go
 
@@ -174,7 +173,7 @@ insert into permiso (idrol,nombremenu) values
  ('987654', 'EMPLEADO','empleado@gmail.com', '987654',2,1)
 
 
-
+ --PROCEDIMIENTOS DE USUARIOS
 
  create procedure SP_RegistrarUsuario(
  @Documento varchar(50),
@@ -284,3 +283,174 @@ insert into permiso (idrol,nombremenu) values
 			 set @Respuesta = 1
 		end
   end
+
+
+  --PROCEDIMIENTOS DE CATEGORÍAS
+ 
+ create procedure SP_RegistrarCategoria(
+ @Descripcion varchar(50),
+ @Estado bit,
+ @Resultado int output,
+ @Mensaje varchar(500) output
+ )
+ AS
+ BEGIN
+      SET @Resultado = 0
+	  IF NOT EXISTS(Select * from Categoria where Descripcion = @Descripcion)
+	  begin
+	       insert into Categoria(Descripcion, estado) values (@Descripcion, @Estado)
+		   set @Resultado = scope_Identity()
+      end
+	  ELSE
+	      set @Mensaje= 'No se puede repetir la descripcion de una Categoria'
+end
+go
+
+
+create procedure SP_EditarCategoria(
+ @IdCategoria int,
+ @Descripcion varchar(50),
+ @Estado bit,
+ @Resultado bit output,
+ @Mensaje varchar(500) output
+ )
+ AS
+ BEGIN
+      SET @Resultado = 1
+	  IF NOT EXISTS(Select * from Categoria where Descripcion = @Descripcion AND idcategoria !=@IdCategoria)
+
+	    update categoria set
+		descripcion=@Descripcion,
+		Estado = @Estado
+		where idcategoria = @IdCategoria
+	else
+	begin
+	   set @Resultado=0
+	   set @Mensaje = 'No se puede repetir la descripcion de una categoria'
+	end
+end
+
+go
+
+
+
+create procedure SP_EliminarCategoria(
+ @IdCategoria int,
+ @Resultado bit output,
+ @Mensaje varchar(500) output
+ )
+ AS
+ BEGIN
+      SET @Resultado = 1
+	  IF NOT EXISTS(
+	  select * from Categoria c
+	  inner join producto p on p.idCategoria = c.IdCategoria
+	  where c.IdCategoria = @IdCategoria
+	  )
+	  begin
+	  delete top(1) from categoria Where idcategoria = @IdCategoria
+	  end
+	  else
+	 begin
+	   set @Resultado=0
+	   set @Mensaje = 'La categoria se encuentra relacionada a un producto'
+      end
+end
+go
+
+
+
+
+--PROCEDIMIENTOS DE PRODUCTOS
+
+create procedure SP_RegistrarProducto (
+@Codigo varchar(20),
+@Nombre varchar(30),
+@Descripcion varchar(100),
+@IdCategoria int,
+@Estado bit,
+@Resultado int output,
+@Mensaje varchar (500) output
+)
+AS
+Begin
+   set @Resultado = 0
+   if NOT EXISTS (Select * from Producto where Codigo = @Codigo)
+   begin
+        Insert into producto(codigo,nombre,descripcion,idcategoria, estado) values(@Codigo,@Nombre,@Descripcion,@IdCategoria,@Estado)
+		set @Resultado = SCOPE_IDENTITY()
+   end
+      else
+	      set @Mensaje ='Ya existe un Producto con el mismo codigo'
+end
+go
+       
+create procedure SP_ModificarProducto(
+@IdProducto int,
+@Codigo varchar(20),
+@Nombre varchar(30),
+@Descripcion varchar(100),
+@IdCategoria int,
+@Estado bit,
+@Resultado bit output,
+@Mensaje varchar(500) output
+)
+AS
+begin
+     set @Resultado = 1
+	 if NOT EXISTS (Select * from producto where codigo =@Codigo and idproducto != @IdProducto)
+
+	   update producto set
+	   codigo = @Codigo,
+	   nombre = @Nombre,
+	   descripcion = @Descripcion,
+	   idcategoria = @IdCategoria,
+	   estado=@Estado
+	   where idproducto = @IdProducto
+	else
+	begin
+	     set @Resultado = 0
+		 set @Mensaje = 'Ya existe un producto con el mismo codigo'
+    end
+end
+go
+
+
+create procedure SP_EliminarProducto(
+@IdProducto int,
+@Respuesta bit output,
+@Mensaje varchar(500) output 
+)
+as
+begin
+     set @Respuesta = 0
+	 set @Mensaje=''
+	 declare @pasoReglas bit = 1
+
+	 if exists (select * from detalle_compra dc
+	 inner join producto p on p.idproducto = dc.idproducto
+	 where p.idproducto = @IdProducto
+	 )
+	 begin
+	      set @pasoReglas = 0
+		  set @Respuesta = 0
+		  set @Mensaje = @Mensaje + 'No se puede eliminar porque se encuentra relacionado a una COMPRA\n'
+     end
+
+	 if exists (Select * from detalle_venta dc
+	 inner join producto p on p.idproducto = dc.idproducto
+	 where p.idproducto = @IdProducto
+	 )
+	 begin
+	      set @pasoReglas = 0
+		  set @Respuesta = 0
+		  set @Mensaje = @Mensaje + 'No se puede elimiar porque se encuentra relacionada a una VENTA\n'
+	 end
+
+	 if(@pasoReglas = 1)
+	 begin
+	     delete from producto where idproducto = @IdProducto
+		 set @Respuesta = 1
+	 end
+end
+go
