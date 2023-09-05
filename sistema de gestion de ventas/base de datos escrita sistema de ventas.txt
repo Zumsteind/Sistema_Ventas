@@ -454,3 +454,150 @@ begin
 	 end
 end
 go
+
+
+
+--PROCEDIMIENTOS DE CLIENTES
+
+create procedure SP_RegistrarCliente(
+@Documento varchar(20),
+@NombreCompleto varchar(50),
+@Correo varchar(60),
+@Telefono varchar(20),
+@Estado bit,
+@Resultado int output,
+@Mensaje varchar(500) output
+)
+as
+begin
+     set @Resultado = 0
+	 declare @IdPersona int
+	 if not exists(Select * from cliente where documento = @Documento)
+	 begin
+	      insert into cliente(documento, nombrecompleto, correo, telefono,estado)
+		  values(@Documento, @NombreCompleto, @Correo, @Telefono, @Estado)
+
+		  set @Resultado = SCOPE_IDENTITY();
+	 end
+	 else
+	     set @Mensaje ='El numero de documento ya existe'
+end
+go
+
+alter procedure SP_ModificarCliente(
+@IdCliente int,
+@Documento varchar(20),
+@NombreCompleto varchar(50),
+@Correo varchar(60),
+@Telefono varchar(20),
+@Estado bit,
+@Resultado bit output,
+@Mensaje varchar(500) output
+)
+as
+begin
+    set @Resultado = 1
+	declare @IdPersona int
+	if not exists (Select * from cliente where documento = @Documento and idcliente != @IdCliente)
+	begin
+	     update cliente set
+		 documento =@Documento,
+		 nombrecompleto = @NombreCompleto,
+		 correo = @Correo,
+		 telefono = @Telefono,
+		 estado = @Estado
+		 where idcliente = @IdCliente
+	 end
+	 else
+	 begin
+	     set @Resultado = 0
+		 set @Mensaje ='El numero de documento ya existe'
+	 end
+end
+go
+
+
+--PROCEDIMIENTOS DE PROVEEDORES
+
+create procedure SP_RegistrarProveedor(
+@Documento varchar(20),
+@RazonSocial varchar(50),
+@Correo varchar(60),
+@Telefono varchar(20),
+@Estado bit,
+@Resultado int output,
+@Mensaje varchar(500) output
+)
+as
+Begin
+    set @Resultado = 0
+	declare @IdPersona int
+	if not exists (Select * from proveedor where documento = @Documento)
+	begin
+	     insert into proveedor(documento, razonsocial, correo, telefono, estado)
+		 values(@Documento, @RazonSocial, @Correo, @Telefono, @Estado)
+
+		 set @Resultado = SCOPE_IDENTITY()
+	 end
+	 else
+	     set @Mensaje ='El numero de Documento ya existe'
+end
+go
+
+
+create procedure SP_ModificarProveedor(
+@IdProveedor int,
+@Documento varchar(20),
+@RazonSocial varchar(50),
+@Correo varchar(60),
+@Telefono varchar(20),
+@Estado bit,
+@Resultado bit output,
+@Mensaje varchar(500) output
+)
+as
+begin
+     set @Resultado=1
+	 declare @IdPersona int
+	 if not exists (Select * from proveedor where documento = @Documento and idproveedor != @IdProveedor)
+	 begin
+	     update proveedor set
+		 documento = @Documento,
+		 razonsocial = @RazonSocial,
+		 correo = @Correo,
+		 telefono = @Telefono,
+		 estado = @Estado
+		 where idproveedor = @IdProveedor
+	 end
+	 else
+	 begin
+	      set @Resultado = 0
+		  set @Mensaje = 'El numero de Documento ya existe'
+     end
+end
+go
+
+
+create procedure SP_EliminarProveedor(
+@IdProveedor int,
+@Resultado bit output,
+@Mensaje varchar(500) output
+)
+as
+begin
+     set @Resultado = 1
+	 if not exists (
+	 select * from proveedor p
+	 inner join compra c on p.idproveedor = c.idproveedor
+	 where p.idproveedor = @IdProveedor
+	 )
+	 begin
+	 delete top(1) from proveedor where idproveedor = @IdProveedor
+	 end
+	 else
+	 begin
+	     set @Resultado =0
+		 set @Mensaje ='El proveedor se encuentra relacionado a una compra'
+	 end
+end
+go
