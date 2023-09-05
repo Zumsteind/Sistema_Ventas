@@ -11,8 +11,7 @@ namespace CapaNegocio
     //lo unico que hacemos devolvemos el metodo de la capa datos, CD_ el que sea
 
     public class CN_Usuario
-        {
-       
+    {       
          private CD_Usuario objcd_usuario = new CD_Usuario();
 
          public List<Usuario> Listar()
@@ -30,7 +29,6 @@ namespace CapaNegocio
             if (obj.NombreCompleto =="")
             Mensaje += "Es necesario el nombre del usuario\n";
 
-
             if (obj.Clave == "")
                 Mensaje += "Es necesario la clave del usuario\n";
 
@@ -38,10 +36,7 @@ namespace CapaNegocio
             return 0;
             
             else
-            return objcd_usuario.Registrar(obj, out Mensaje);
-            
-
-           
+            return objcd_usuario.Registrar(obj, out Mensaje);                  
         }
 
 
@@ -54,7 +49,6 @@ namespace CapaNegocio
 
             if (obj.NombreCompleto == "")
                 Mensaje += "Es necesario el nombre del usuario\n";
-
 
             if (obj.Clave == "")
                 Mensaje += "Es necesario la clave del usuario\n";
@@ -69,23 +63,7 @@ namespace CapaNegocio
 
         public bool Eliminar(Usuario obj, out string Mensaje)
         {
-            Mensaje = string.Empty;
-
-            if (obj.Documento == "")
-                Mensaje += "Es necesario el documento del usuario\n";
-
-            if (obj.NombreCompleto == "")
-                Mensaje += "Es necesario el nombre del usuario\n";
-
-
-            if (obj.Clave == "")
-                Mensaje += "Es necesario la clave del usuario\n";
-
-            if (Mensaje != string.Empty)
-                return false;
-
-            else
-                return objcd_usuario.Eliminar(obj, out Mensaje);
+            return objcd_usuario.Eliminar(obj, out Mensaje);
         }
     }
 }

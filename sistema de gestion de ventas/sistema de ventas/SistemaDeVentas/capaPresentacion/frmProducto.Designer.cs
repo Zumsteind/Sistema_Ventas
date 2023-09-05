@@ -29,10 +29,10 @@ namespace capaPresentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtIndice = new System.Windows.Forms.TextBox();
             this.btnLimpiarBuscador = new FontAwesome.Sharp.IconButton();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
@@ -44,6 +44,18 @@ namespace capaPresentacion
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.btnLimpiar = new FontAwesome.Sharp.IconButton();
             this.dgvData = new System.Windows.Forms.DataGridView();
+            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAgregar = new FontAwesome.Sharp.IconButton();
             this.lblEstado = new System.Windows.Forms.Label();
@@ -57,18 +69,7 @@ namespace capaPresentacion
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExportar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,7 +94,7 @@ namespace capaPresentacion
             this.btnLimpiarBuscador.IconColor = System.Drawing.Color.Black;
             this.btnLimpiarBuscador.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiarBuscador.IconSize = 25;
-            this.btnLimpiarBuscador.Location = new System.Drawing.Point(1700, 56);
+            this.btnLimpiarBuscador.Location = new System.Drawing.Point(1705, 60);
             this.btnLimpiarBuscador.Name = "btnLimpiarBuscador";
             this.btnLimpiarBuscador.Size = new System.Drawing.Size(73, 31);
             this.btnLimpiarBuscador.TabIndex = 49;
@@ -111,7 +112,7 @@ namespace capaPresentacion
             this.btnBuscar.IconColor = System.Drawing.Color.Black;
             this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBuscar.IconSize = 25;
-            this.btnBuscar.Location = new System.Drawing.Point(1601, 56);
+            this.btnBuscar.Location = new System.Drawing.Point(1603, 60);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(72, 31);
             this.btnBuscar.TabIndex = 48;
@@ -122,7 +123,7 @@ namespace capaPresentacion
             // 
             this.txtBuscador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBuscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscador.Location = new System.Drawing.Point(1281, 57);
+            this.txtBuscador.Location = new System.Drawing.Point(1282, 63);
             this.txtBuscador.Name = "txtBuscador";
             this.txtBuscador.Size = new System.Drawing.Size(261, 30);
             this.txtBuscador.TabIndex = 47;
@@ -132,7 +133,7 @@ namespace capaPresentacion
             this.cbxBuscador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxBuscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxBuscador.FormattingEnabled = true;
-            this.cbxBuscador.Location = new System.Drawing.Point(999, 54);
+            this.cbxBuscador.Location = new System.Drawing.Point(999, 60);
             this.cbxBuscador.Name = "cbxBuscador";
             this.cbxBuscador.Size = new System.Drawing.Size(230, 33);
             this.cbxBuscador.TabIndex = 46;
@@ -165,11 +166,10 @@ namespace capaPresentacion
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(366, 29);
             this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.label3.Padding = new System.Windows.Forms.Padding(3, 5, 0, 0);
             this.label3.Size = new System.Drawing.Size(1526, 84);
             this.label3.TabIndex = 52;
             this.label3.Text = "Lista de Productos:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnEliminar
             // 
@@ -223,15 +223,15 @@ namespace capaPresentacion
             this.dgvData.BackgroundColor = System.Drawing.Color.White;
             this.dgvData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgvData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnSeleccionar,
@@ -246,28 +246,129 @@ namespace capaPresentacion
             this.PrecioVenta,
             this.EstadoValor,
             this.Estado});
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvData.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvData.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvData.GridColor = System.Drawing.Color.SteelBlue;
             this.dgvData.Location = new System.Drawing.Point(366, 151);
             this.dgvData.MultiSelect = false;
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             this.dgvData.RowHeadersWidth = 51;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvData.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvData.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvData.RowTemplate.Height = 28;
             this.dgvData.Size = new System.Drawing.Size(1492, 579);
             this.dgvData.TabIndex = 51;
             this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick);
             this.dgvData.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgvData_CellPainting);
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.HeaderText = "";
+            this.btnSeleccionar.MinimumWidth = 6;
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.ReadOnly = true;
+            this.btnSeleccionar.Width = 30;
+            // 
+            // Id
+            // 
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Id.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Id.HeaderText = "ID ";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            this.Id.Width = 150;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.MinimumWidth = 6;
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 180;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 200;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.MinimumWidth = 6;
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 250;
+            // 
+            // IdCategoria
+            // 
+            this.IdCategoria.HeaderText = "ID Categoria";
+            this.IdCategoria.MinimumWidth = 6;
+            this.IdCategoria.Name = "IdCategoria";
+            this.IdCategoria.ReadOnly = true;
+            this.IdCategoria.Visible = false;
+            this.IdCategoria.Width = 125;
+            // 
+            // Categoria
+            // 
+            this.Categoria.HeaderText = "Categoria";
+            this.Categoria.MinimumWidth = 6;
+            this.Categoria.Name = "Categoria";
+            this.Categoria.ReadOnly = true;
+            this.Categoria.Width = 200;
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.MinimumWidth = 6;
+            this.Stock.Name = "Stock";
+            this.Stock.ReadOnly = true;
+            this.Stock.Width = 125;
+            // 
+            // PrecioCompra
+            // 
+            this.PrecioCompra.HeaderText = "Precio Compra";
+            this.PrecioCompra.MinimumWidth = 6;
+            this.PrecioCompra.Name = "PrecioCompra";
+            this.PrecioCompra.ReadOnly = true;
+            this.PrecioCompra.Width = 125;
+            // 
+            // PrecioVenta
+            // 
+            this.PrecioVenta.HeaderText = "Precio Venta";
+            this.PrecioVenta.MinimumWidth = 6;
+            this.PrecioVenta.Name = "PrecioVenta";
+            this.PrecioVenta.ReadOnly = true;
+            this.PrecioVenta.Width = 125;
+            // 
+            // EstadoValor
+            // 
+            this.EstadoValor.HeaderText = "Estado Valor";
+            this.EstadoValor.MinimumWidth = 6;
+            this.EstadoValor.Name = "EstadoValor";
+            this.EstadoValor.ReadOnly = true;
+            this.EstadoValor.Visible = false;
+            this.EstadoValor.Width = 125;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.MinimumWidth = 6;
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Width = 125;
             // 
             // label2
             // 
@@ -417,112 +518,33 @@ namespace capaPresentacion
             this.label1.Size = new System.Drawing.Size(347, 868);
             this.label1.TabIndex = 28;
             // 
-            // btnSeleccionar
+            // btnExportar
             // 
-            this.btnSeleccionar.HeaderText = "";
-            this.btnSeleccionar.MinimumWidth = 6;
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.ReadOnly = true;
-            this.btnSeleccionar.Width = 30;
-            // 
-            // Id
-            // 
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Id.DefaultCellStyle = dataGridViewCellStyle18;
-            this.Id.HeaderText = "ID ";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
-            this.Id.Width = 150;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.MinimumWidth = 6;
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            this.Codigo.Width = 180;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 200;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.MinimumWidth = 6;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 250;
-            // 
-            // IdCategoria
-            // 
-            this.IdCategoria.HeaderText = "ID Categoria";
-            this.IdCategoria.MinimumWidth = 6;
-            this.IdCategoria.Name = "IdCategoria";
-            this.IdCategoria.ReadOnly = true;
-            this.IdCategoria.Visible = false;
-            this.IdCategoria.Width = 125;
-            // 
-            // Categoria
-            // 
-            this.Categoria.HeaderText = "Categoria";
-            this.Categoria.MinimumWidth = 6;
-            this.Categoria.Name = "Categoria";
-            this.Categoria.ReadOnly = true;
-            this.Categoria.Width = 200;
-            // 
-            // Stock
-            // 
-            this.Stock.HeaderText = "Stock";
-            this.Stock.MinimumWidth = 6;
-            this.Stock.Name = "Stock";
-            this.Stock.ReadOnly = true;
-            this.Stock.Width = 125;
-            // 
-            // PrecioCompra
-            // 
-            this.PrecioCompra.HeaderText = "Precio Compra";
-            this.PrecioCompra.MinimumWidth = 6;
-            this.PrecioCompra.Name = "PrecioCompra";
-            this.PrecioCompra.ReadOnly = true;
-            this.PrecioCompra.Width = 125;
-            // 
-            // PrecioVenta
-            // 
-            this.PrecioVenta.HeaderText = "Precio Venta";
-            this.PrecioVenta.MinimumWidth = 6;
-            this.PrecioVenta.Name = "PrecioVenta";
-            this.PrecioVenta.ReadOnly = true;
-            this.PrecioVenta.Width = 125;
-            // 
-            // EstadoValor
-            // 
-            this.EstadoValor.HeaderText = "Estado Valor";
-            this.EstadoValor.MinimumWidth = 6;
-            this.EstadoValor.Name = "EstadoValor";
-            this.EstadoValor.ReadOnly = true;
-            this.EstadoValor.Visible = false;
-            this.EstadoValor.Width = 125;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.MinimumWidth = 6;
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Width = 125;
+            this.btnExportar.BackColor = System.Drawing.Color.White;
+            this.btnExportar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExportar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportar.ForeColor = System.Drawing.Color.Black;
+            this.btnExportar.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.btnExportar.IconColor = System.Drawing.Color.Green;
+            this.btnExportar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnExportar.IconSize = 25;
+            this.btnExportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExportar.Location = new System.Drawing.Point(637, 62);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(165, 31);
+            this.btnExportar.TabIndex = 56;
+            this.btnExportar.Text = "Descargar Excel";
+            this.btnExportar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExportar.UseVisualStyleBackColor = false;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
             // frmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1890, 868);
+            this.Controls.Add(this.btnExportar);
             this.Controls.Add(this.txtIndice);
             this.Controls.Add(this.btnLimpiarBuscador);
             this.Controls.Add(this.btnBuscar);
@@ -547,7 +569,7 @@ namespace capaPresentacion
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmProducto";
             this.Text = "frmProducto";
             this.Load += new System.EventHandler(this.frmProducto_Load);
@@ -595,5 +617,6 @@ namespace capaPresentacion
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconButton btnExportar;
     }
 }
