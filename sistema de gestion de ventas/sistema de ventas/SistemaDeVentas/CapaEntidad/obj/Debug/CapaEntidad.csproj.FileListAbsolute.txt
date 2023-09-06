@@ -4,3 +4,9 @@ C:\Users\test\Desktop\sistema de gestion de ventas\sistema de ventas\SistemaDeVe
 C:\Users\test\Desktop\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 C:\Users\test\Desktop\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Users\test\Desktop\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\CapaEntidad\obj\Debug\CapaEntidad.pdb

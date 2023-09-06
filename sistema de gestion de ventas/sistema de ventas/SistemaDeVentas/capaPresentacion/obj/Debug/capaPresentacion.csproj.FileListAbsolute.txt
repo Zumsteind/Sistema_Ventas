@@ -79,3 +79,4 @@ C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de g
 C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\bin\Debug\ClosedXML.xml
 C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\bin\Debug\DocumentFormat.OpenXml.xml
 C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\bin\Debug\ExcelNumberFormat.xml
+C:\Users\lisan\OneDrive\Escritorio\SISTEMA DE VENTAS\Sistema_Ventas\sistema de gestion de ventas\sistema de ventas\SistemaDeVentas\capaPresentacion\obj\Debug\capaPresentacion.frmNegocio.resources

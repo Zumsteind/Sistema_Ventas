@@ -137,9 +137,9 @@ namespace capaPresentacion
             AbrirFormulario(menureportes, new frmReportes());
         }
 
-        private void menutitulo_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void SubMenuNegocio_Click(object sender, EventArgs e)
         {
-
+            AbrirFormulario(menumantenedor, new frmNegocio());
         }
     }
 }
